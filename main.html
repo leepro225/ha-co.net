@@ -43,7 +43,7 @@
                             <li><a href="#" class="404-trigger">portfolio</a></li>
                             <li><a href="libraryList.html">library</a></li>
                             <li><a href="contact.html">contact</a></li>
-                            <li><a href="#" class="404-trigger">login</a></li>
+                            <li><a href="#" class="login-trigger">login</a></li>
                         </ul>
                     </div>
                 </div>    
@@ -259,6 +259,48 @@
                     </div>
                 </div>
 
+                <!-- login -->
+                <div class="haco-login-modal-wrapper">
+                    <div class="haco-login-modal">
+                        <div class="haco-login-modal-head">
+                            <img src="img/alert.png" class="alertPng"><span class="modalMassage">hello!</span>
+                            <a class="btn-close login-trigger" href="#">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="haco-login-modal-content">
+                            <div class="login-container">
+                                <div class="login-move">
+                                  <div class="login-p-button login-normal login-signin login-animated login-pulse">SIGN IN</div>
+                                </div>
+                                <div class="login-welcome">
+                                  <h4 class="login-bold login-welcome-text">Welcome Back!</h4>
+                                  <p class="login-normal login-text">To keep connected with us please login with your personal info</p>
+                                </div>
+                                <div class="login-hello">
+                                  <h4 class="login-bold login-welcome-text">Hello Friend</h4>
+                                  <p class="login-normal login-text">Enter your personal details and start journey with us</p>
+                                </div>
+                                <div class="login-form">
+                                  <h4 class="login-bold login-title">Create Account</h4>
+                                  <div class="login-icons">
+                                    <div class="login-icon"><i class="fab fa-facebook-f"></i></div>
+                                    <div class="login-icon"><i class="fab fa-github"></i></div>
+                                    <div class="login-icon"><i class="fab fa-twitter"></i></div>
+                                  </div>
+                                  <p class="login-normal login-light">Or use your email for registration</p>
+                                  <input type="text" placeholder="Name" class="normal name">
+                                  <input type="text" placeholder="Email" class="normal">
+                                  <br/>
+                                  <input type="password" placeholder="Password" class="login-normal"><br>
+                                  <p class="login-normal login-forgot">Forgot your password?</p>
+                                  <button class="login-b-button login-normal">SIGN UP</button>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Scroll to top -->
                 <span class="totop"><a href="#"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a></span> 
                 
@@ -344,13 +386,69 @@
             $(".right").animate({scrollTop: 0}, 500);
         });
 
-        // Popup Modal Delete & Write & 404       
+        // Popup Modal 404       
         $('.404-trigger').on('click', function() {
             $('.haco-404-modal-wrapper').toggleClass('open');
             
             return false;
         });
-    
+
+        // Popup Modal login      
+        $('.login-trigger').on('click', function() {
+            $('.haco-login-modal-wrapper').toggleClass('open');
+            
+            return false;
+        });
+
+        let flag = 0;
+
+        $(".login-signin").on("click", function(){
+            if(flag == 0){
+                $(".login-move").addClass("login-moving");
+                $(".login-move").removeClass("login-start");
+                
+                $(".login-form").addClass("login-movingForm");
+                $(".login-form").removeClass("login-startForm");
+                
+                $(".login-hello").show();
+                $(".login-welcome").hide();
+                   
+                $(".login-move").css("background-position", "right");
+                
+                setTimeout(function(){
+                    $(".login-title").text("Sign-in in to ha-co");
+                    $(".login-light").text("Or use your email account");
+                    $(".name").hide();
+                    $(".login-p-button").text("SIGN IN");
+                    $(".login-b-button").text("SIGN UP");
+                    $(".login-forgot").show();
+                    }, 200);
+                    
+                    flag=1;
+            } else {
+                $(".login-move").removeClass("login-moving");
+                $(".login-move").addClass("login-start");
+                
+                $(".login-form").removeClass("login-movingForm");
+                $(".login-form").addClass("login-startForm");
+                        
+                $(".login-hello").hide();
+                $(".login-welcome").show();
+                
+                $(".login-move").css("background-position", "left");
+                
+                setTimeout(function(){
+                    $(".login-title").text("Create Account");
+                    $(".login-light").text("Or use your email for registration");
+                    $(".login-name").show();
+                    $(".login-p-button").text("SIGN UP");
+                    $(".login-b-button").text("SIGN IN");
+                    $(".login-forgot").hide();
+                    }, 200);
+                    
+                flag=0;
+            }
+        });  
     });
 
 </script>
