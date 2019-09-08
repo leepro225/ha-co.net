@@ -275,11 +275,11 @@
                                 </div>
                                 <div class="login-welcome">
                                   <h4 class="login-bold login-welcome-text">Welcome Back!</h4>
-                                  <p class="login-normal login-text">To keep connected with us please login with your personal info</p>
+                                  <p class="login-normal login-text">To keep connected with me please login with your personal info</p>
                                 </div>
                                 <div class="login-hello">
                                   <h4 class="login-bold login-welcome-text">Hello Friend</h4>
-                                  <p class="login-normal login-text">Enter your personal details and start journey with us</p>
+                                  <p class="login-normal login-text">Enter your personal details and start journey with me</p>
                                 </div>
                                 <div class="login-form">
                                   <h4 class="login-bold login-title">Create Account</h4>
@@ -289,8 +289,8 @@
                                     <div class="login-icon"><i class="fab fa-twitter"></i></div>
                                   </div>
                                   <p class="login-normal login-light">Or use your email for registration</p>
-                                  <input type="text" placeholder="Name" class="normal name">
-                                  <input type="text" placeholder="Email" class="normal">
+                                  <input type="text" placeholder="Name" class="login-normal login-name">
+                                  <input type="text" placeholder="Email" class="login-normal">
                                   <br/>
                                   <input type="password" placeholder="Password" class="login-normal"><br>
                                   <p class="login-normal login-forgot">Forgot your password?</p>
@@ -416,9 +416,9 @@
                 $(".login-move").css("background-position", "right");
                 
                 setTimeout(function(){
-                    $(".login-title").text("Sign-in in to ha-co");
+                    $(".login-title").text("Sign-in to ha-co");
                     $(".login-light").text("Or use your email account");
-                    $(".name").hide();
+                    $(".login-name").hide();
                     $(".login-p-button").text("SIGN IN");
                     $(".login-b-button").text("SIGN UP");
                     $(".login-forgot").show();

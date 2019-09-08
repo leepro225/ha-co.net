@@ -1537,12 +1537,11 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 
 .login-p-button{
     animation-iteration-count:5;
-    color:white;
-    padding:12px 60px;
+    padding:12px 40px;
     color:#fff;
     font-size:14px;
-    border:1px solid #fff;
-    width:40%;
+    border:2px solid #fff;
+    width:50%;
     position:absolute;
     left:0;
     right:0;
@@ -1564,7 +1563,7 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 }
 
 .login-text{
-    width:60%;
+    width:70%;
     line-height:20px;
     margin:0 auto;
 }
@@ -1605,6 +1604,7 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
     transform:translate(300px);
     width:394px;
     background-color:#fff;
+    padding: 20px;
 }
 
 input{
@@ -1616,11 +1616,11 @@ input{
 }
 
 .login-b-button{
-    background-color:#079992;
-    color:white;
-    padding:12px 60px;
-    color:#fff;
-    font-size:14px;
+    background-color: #ffffff;
+    padding: 12px 60px;
+    color: #000;
+    font-size: 14px;
+    border: 2px solid #000;
 }
     
 
