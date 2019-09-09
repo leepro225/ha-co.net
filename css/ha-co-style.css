@@ -1150,6 +1150,7 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 }
 .panel-group {
     margin-bottom:80px;
+    clear: both;
 }
 
 
@@ -1439,13 +1440,11 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 }
 
 .login-bold{
-    font-family: 'Montserrat', sans-serif;
     font-weight:700;
     font-size:25px;
 }
 
 .login-normal{
-    font-family: 'Darker Grotesque', sans-serif;
     font-weight:500;
     font-size:17px;
 }
@@ -1485,7 +1484,7 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
     text-align:center;
     z-index:20;
     background-color:#2ecc71;
-    background-image:url("http://www.pixmy.tech/Projects/Codepen/SlideForm/bg.jpg");
+    background-image:url("../img/create.jpg");
     background-size:cover;
     background-position:left;
     transition:all .4s ease;
@@ -1607,10 +1606,10 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
     padding: 20px;
 }
 
-input{
+.login-form > input {
     border:0px;
     border-bottom:1px solid lightgray;
-    margin-bottom:15px;
+    margin-bottom: 8px;
     padding: 8px 5px;
     width:60%;
 }
@@ -1621,6 +1620,7 @@ input{
     color: #000;
     font-size: 14px;
     border: 2px solid #000;
+    margin-top:9px;
 }
     
 

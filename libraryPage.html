@@ -50,7 +50,7 @@
                             <!--<li><a href="#">about Ha-co</a></li>-->
                                 <li class="active"><a href="libraryList.html">library</a></li>
                                 <li><a href="contact.html">contact</a></li>
-                                <li><a href="#" class="404-trigger">login</a></li>
+                                <li><a href="#" class="login-trigger">login</a></li>
                             </ul>
                         </div>
                     </div>    
@@ -67,7 +67,7 @@
                             <span class="haco-social-span">SNS</span>
                             <div class="haco-social-container">
                                 <a href="#"><i class="fa fa-envelope"></i></a>
-                                <a href="#"><i class="fab fa-github-alt"></i></a>
+                                <a href="https://github.com/leepro225"><i class="fab fa-github-alt"></i></a>
                                 <a href="#"><i class="fab fa-linkedin-in"></i></a> 
                             </div>
                         </div>                     
@@ -82,33 +82,31 @@
                 </div> -->
 
                 <div class="col-md-9 right">
-                        <div class="row">
-                            <div class="libraryHeader col-lg-6">
-                                <h2><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span><span class="underlineMagical"><b><a href="libraryList.html">back to the list</a></b></span></h2>
-                                    <h1>JavaScript.</h1>                                     
-                            </div>
-                        
-                            <div class="librarySearchBox col-lg-2 col-xs-2">
-                              <div class="input-group">
-                                <span class="input-group-btn">
-                                  <button class="btn btn-default haco-btn" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                                </span>
-                                <input type="text" class="haco-form-control" placeholder="찾기">
-                              </div><!-- /input-group -->
-                            </div><!-- /.col-lg-6 -->
-                            <div class="librarySortBox col-lg-2 col-xs-2 selectUI">
-                                <a href="#none" class="selCheck">정렬 방식<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a>                   
-                                <ul class="selectOption" style="display:none;">
-                                    <li><a href="#">글번호순</a></li>
-                                    <li><a href="#">최신순</a></li>
-                                    <li><a href="#">오래된순</a></li>
-                                    <li><a href="#">제목 오름차순</a></li>
-                                    <li><a href="#">제목 내림차순</a></li>
-                                </ul>
-                            </div><!-- /.col-lg-6 -->
-                        </div><!-- /.row -->
+                    <div class="row">
+                        <div class="libraryHeader col-lg-6">
+                            <h2><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span><span class="underlineMagical"><b><a href="libraryList.html">back to the list</a></b></span></h2>
+                                <h1>JavaScript.</h1>                                     
+                        </div>      
+                        <div class="librarySearchBox col-lg-2 col-xs-2">
+                            <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default haco-btn" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                            </span>
+                            <input type="text" class="haco-form-control" placeholder="찾기">
+                            </div><!-- /input-group -->
+                        </div><!-- /.col-lg-6 -->
+                        <div class="librarySortBox col-lg-2 col-xs-2 selectUI">
+                            <a href="#none" class="selCheck">정렬 방식<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a>                   
+                            <ul class="selectOption" style="display:none;">
+                                <li><a href="#">글번호순</a></li>
+                                <li><a href="#">최신순</a></li>
+                                <li><a href="#">오래된순</a></li>
+                                <li><a href="#">제목 오름차순</a></li>
+                                <li><a href="#">제목 내림차순</a></li>
+                            </ul>
+                        </div><!-- /.col-lg-6 -->
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                            <a href="#" class="addList write-trigger"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                            <a href="#" class="addList write-trigger"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> 
                             <div class="panel">
                                 <div class="haco-panel-heading" role="tab" id="headingOne">
                                 <h4 class="panel-title">
@@ -276,7 +274,9 @@
                                 </div>
                             </div>
                         </div>
+                        </div><!-- /.row -->
 
+                        <!-- delete -->
                         <div class="haco-delete-modal-wrapper">
                             <div class="haco-delete-modal">
                                 <div class="haco-delete-modal-head">
@@ -294,7 +294,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!-- write -->
                         <div class="haco-write-modal-wrapper">
                             <div class="haco-write-modal">
                                 <div class="haco-write-modal-head">
@@ -317,7 +317,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!-- 404 -->
                         <div class="haco-404-modal-wrapper">
                             <div class="haco-404-modal">
                                 <div class="haco-404-modal-head">
@@ -336,6 +336,47 @@
                             </div>
                         </div>
 
+                        <!-- login -->
+                        <div class="haco-login-modal-wrapper">
+                        <div class="haco-login-modal">
+                            <div class="haco-login-modal-head">
+                                <img src="img/alert.png" class="alertPng"><span class="modalMassage">hello!</span>
+                                <a class="btn-close login-trigger" href="#">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="haco-login-modal-content">
+                                <div class="login-container">
+                                    <div class="login-move">
+                                      <div class="login-p-button login-normal login-signin login-animated login-pulse">SIGN IN</div>
+                                    </div>
+                                    <div class="login-welcome">
+                                      <h4 class="login-bold login-welcome-text">Welcome Back!</h4>
+                                      <p class="login-normal login-text">To keep connected with me please login with your personal info</p>
+                                    </div>
+                                    <div class="login-hello">
+                                      <h4 class="login-bold login-welcome-text">Hello Friend</h4>
+                                      <p class="login-normal login-text">Enter your personal details and start journey with me</p>
+                                    </div>
+                                    <div class="login-form">
+                                      <h4 class="login-bold login-title">Create Account</h4>
+                                      <div class="login-icons">
+                                        <div class="login-icon"><i class="fab fa-facebook-f"></i></div>
+                                        <div class="login-icon"><i class="fab fa-github"></i></div>
+                                        <div class="login-icon"><i class="fab fa-twitter"></i></div>
+                                      </div>
+                                      <p class="login-normal login-light">Or use your email for registration</p>
+                                      <input type="text" placeholder="Name" class="login-normal login-name">
+                                      <input type="text" placeholder="Email" class="login-normal">
+                                      <br/>
+                                      <input type="password" placeholder="Password" class="login-normal"><br>
+                                      <p class="login-normal login-forgot">Forgot your password?</p>
+                                      <button class="login-b-button login-normal">SIGN UP</button>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                        </div>
                         <!-- Scroll to top -->
                         <span class="totop"><a href="#"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a></span> 
                         <!-- Footer-->
@@ -343,9 +384,13 @@
                             Copyright 2019. ha-co. All rights reserved | E-mail : leepro225@gmail.com | <a href="https://www.etri.re.kr/korcon/etc/etc_04.etri">이메일무단수집거부</a>
                         </footer>
                     </div> 
-                </div>
             </div>
-    <script>
+        </div>
+<script>
+
+    $(document).ready(function(){
+
+        // menu
         var burger = $('.menu-trigger');
 
         burger.each(function(index){
@@ -353,96 +398,148 @@
             
             $this.on('click', function(e){
                 e.preventDefault();
-                $(this).toggleClass('active-8');
+                $(this).toggleClass('active-li');
             })
         });
+        
+        $(".menu-trigger").click(function(){
+            $(".menuBg").slideToggle("500");
+            $(".menu-list-pc").slideToggle("slow");       
+        });
 
-        $(document).ready(function(){
 
-            $('#summernote').summernote({
-                height: '40vh',
-                lang: 'ko-KR' // 언어 세팅
-            });
+        // $("#noticeBtn").click(function(){
+        //     $(".notice").slideToggle("slow");
+        //     $(".noticePlayStop").slideToggle("slow");               
+        // });
+
+        // Scroll to Top 
+        $(".totop").hide();
+
+        $(".right").scroll(function(){
+
+            if ($(this).scrollTop()>300) {
+                $('.totop').fadeIn();
+            } else {
+                $('.totop').fadeOut();
+            }
+        });
+
+        $('.totop a').click(function (e) {
+            e.preventDefault();
+
+            $(".right").animate({scrollTop: 0}, 500);
+        });
+
+        // Popup Modal delete 
+        $('.delete-trigger').on('click', function() {
+            $('.haco-delete-modal-wrapper').toggleClass('open');
+            return false;
+        });
+
+        // Popup Modal write 
+        $('.write-trigger').on('click', function() {
+            $('.haco-write-modal-wrapper').toggleClass('open');
+            return false;
+        });
+
+        // Popup Modal 404       
+        $('.404-trigger').on('click', function() {
+            $('.haco-404-modal-wrapper').toggleClass('open');
             
-            // $("#noticeBtn").click(function(){
-            //     $(".notice").slideToggle("slow");
-            //     $(".noticePlayStop").slideToggle("slow");               
-            // });
+            return false;
+        });
 
-             /* Menu */
-            $(".menu-trigger").click(function(){
-                $(".menuBg").slideToggle("500");
-                $(".menu-list-pc").slideToggle("slow");       
-            });
-
-            /* Scroll to Top */
-            $(".totop").hide();
-
-            $(".right").scroll(function(){
-                if ($(this).scrollTop()>300)
-                {
-                    $('.totop').fadeIn();
-                } 
-                else
-                {
-                    $('.totop').fadeOut();
-                }
-                });
-
-                $('.totop a').click(function (e) {
-                e.preventDefault();
-                $(".right").animate({scrollTop: 0}, 500);
-                });
-
-
-                // selectbox
-                
-                    var jObj = $('.selectUI');
-                    var oObj = jObj.find('.selectOption > li');
-                    var str = jObj.find('.selCheck');
-                    
-                    jObj.children().click(function(e) {
-                        e.preventDefault();
-                        
-                        $(this).next('.selectOption').slideToggle();
-                        if(!$(this).hasClass('selectON')){
-                            $(this).addClass('selectON');
-                        } else {
-                            $(this).removeClass('selectON');
-                        }
-                    });
-                    
-                    oObj.click(function(e) {
-                        e.preventDefault();
-                        
-                        str.html($(this).text());
-                        $(this).parent().slideUp();
-                        $(this).parent().prev().removeClass('selectON');
-                    });  
-                
-
-                // delete & write & 404 popup
-                
-                $('.delete-trigger').on('click', function() {
-                    $('.haco-delete-modal-wrapper').toggleClass('open');
-                    return false;
-                });
-
-                $('.write-trigger').on('click', function() {
-                    $('.haco-write-modal-wrapper').toggleClass('open');
-                    return false;
-                });
-              
-                $('.404-trigger').on('click', function() {
-                    $('.haco-404-modal-wrapper').toggleClass('open');
-                    return false;
-                });
-
-            });
-
+        // Popup Modal login      
+        $('.login-trigger').on('click', function() {
+            $('.haco-login-modal-wrapper').toggleClass('open');
             
-           
-    </script>
+            return false;
+        });
+
+        let flag = 0;
+
+        $(".login-signin").on("click", function(){
+            if(flag == 0){
+                $(".login-move").addClass("login-moving");
+                $(".login-move").removeClass("login-start");
+                
+                $(".login-form").addClass("login-movingForm");
+                $(".login-form").removeClass("login-startForm");
+                
+                $(".login-hello").show();
+                $(".login-welcome").hide();
+                    
+                $(".login-move").css("background-position", "right");
+                
+                setTimeout(function(){
+                    $(".login-title").text("Sign-in to ha-co");
+                    $(".login-light").text("Or use your email account");
+                    $(".login-name").hide();
+                    $(".login-p-button").text("SIGN IN");
+                    $(".login-b-button").text("SIGN UP");
+                    $(".login-forgot").show();
+                    }, 200);
+                    
+                    flag=1;
+            } else {
+                $(".login-move").removeClass("login-moving");
+                $(".login-move").addClass("login-start");
+                
+                $(".login-form").removeClass("login-movingForm");
+                $(".login-form").addClass("login-startForm");
+                        
+                $(".login-hello").hide();
+                $(".login-welcome").show();
+                
+                $(".login-move").css("background-position", "left");
+                
+                setTimeout(function(){
+                    $(".login-title").text("Create Account");
+                    $(".login-light").text("Or use your email for registration");
+                    $(".login-name").show();
+                    $(".login-p-button").text("SIGN UP");
+                    $(".login-b-button").text("SIGN IN");
+                    $(".login-forgot").hide();
+                    }, 200);
+                    
+                flag=0;
+            }
+        });
+
+        // selectbox
+        
+        var jObj = $('.selectUI');
+        var oObj = jObj.find('.selectOption > li');
+        var str = jObj.find('.selCheck');
+        
+        jObj.children().click(function(e) {
+            e.preventDefault();
+            
+            $(this).next('.selectOption').slideToggle();
+            if(!$(this).hasClass('selectON')){
+                $(this).addClass('selectON');
+            } else {
+                $(this).removeClass('selectON');
+            }
+        });
+        
+        oObj.click(function(e) {
+            e.preventDefault();
+            
+            str.html($(this).text());
+            $(this).parent().slideUp();
+            $(this).parent().prev().removeClass('selectON');
+        }); 
+
+        // summernote
+        $('#summernote').summernote({
+            height: '40vh',
+            lang: 'ko-KR' // 언어 세팅
+        });  
+    });
+ </script>
+
 </body>
     
 
