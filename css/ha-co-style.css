@@ -2158,6 +2158,14 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
     .modalQuestionBox > img {
         width: 308px;
     }
+
+    .login-form {
+        display: contents;
+    }
+
+    .login-move {
+        display: none;
+    }
 }
 
 /* IPHONE5*/
