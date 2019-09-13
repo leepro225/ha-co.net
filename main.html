@@ -26,6 +26,7 @@
 
     <!-- ha-co CSS -->
     <link rel="stylesheet" href="css/ha-co-style.css">
+
 </head>
 <body onload="startTime()">       
     <div class="container-fluid">         
@@ -137,7 +138,7 @@
                     <span class="subHeader1">console.log(&nbsp;<span class="subHeader2">portfolio</span>&nbsp;);</span><span class="categoryBtn"><a href="#">latest</a>&nbsp;|&nbsp;<a href="#">oldest</a></span>
                     <div class="contentBoxIner">
                         <div class="portfolioBox">
-                            <div class="col-md-6 col-sm-6 col-xs-12 portfolioImage">
+                            <div class="col-md-6 col-sm-6 col-xs-12 portfolioImage hideme">
                                 <div class="imac">
                                     <div class="browser"><div class="browser_close"><span class="close-first-child"></span><span class="close-last-child"></span></div><div class="browser_maximum"></div><div class="browser_minimum"></div></div>
                                     <div class="screen">
@@ -197,7 +198,7 @@
                                     #bootstrap #RESTful API #Passport 
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12 portfolioImage portfolioEvenPC">
+                            <div class="col-md-6 col-sm-6 col-xs-12 portfolioImage portfolioEvenPC hideme">
                                 <div class="imac">
                                     <div class="browser"><div class="browser_close"><span class="close-first-child"></span><span class="close-last-child"></span></div><div class="browser_maximum"></div><div class="browser_minimum"></div></div>
                                     <div class="screen">
@@ -207,7 +208,7 @@
                             </div>
                         </div>
                         <div class="portfolioBox">
-                            <div class="col-md-6 col-sm-6 col-xs-12 portfolioImage">
+                            <div class="col-md-6 col-sm-6 col-xs-12 portfolioImage hideme">
                                 <div class="imac">
                                     <div class="browser"><div class="browser_close"><span class="close-first-child"></span><span class="close-last-child"></span></div><div class="browser_maximum"></div><div class="browser_minimum"></div></div>
                                     <div class="screen">
@@ -345,6 +346,19 @@
 
     $(function(){
   
+        $(".right").scroll(function(){
+            $('.hideme').each( function(i){
+            
+                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                
+                /* If the object is completely visible in the window, fade it it */
+                if( bottom_of_window > bottom_of_object ){   
+                    $(this).animate({'opacity':'1'},800);  
+                }
+            }); 
+        });
+
         // menu
         var burger = $('.menu-trigger');
 

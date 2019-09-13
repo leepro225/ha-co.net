@@ -39,6 +39,10 @@ a:focus {
     margin-bottom: 10%;
 }
 
+.hideme
+{
+    opacity:0;
+}
 
 
 /* CONTACT */
