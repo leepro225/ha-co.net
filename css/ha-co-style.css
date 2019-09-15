@@ -45,9 +45,6 @@ a:focus {
 }
 
 
-#login-mob-botton {
-    display: none;
-}
 
 
 /* CONTACT */
@@ -1395,8 +1392,11 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
     padding-bottom: 20px;
 }
 
-/* login MODAL */
-.haco-login-modal-wrapper {
+/* signIn MODAL */
+.signIn-container {
+    color:#fff;
+}
+.haco-signIn-modal-wrapper {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -1409,229 +1409,209 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
     z-index: 3;
 }
 
-.haco-login-modal-wrapper.open {
+.haco-signIn-modal-wrapper.open {
     opacity: 1;
     visibility: visible;
 }
 
-.haco-login-modal {
-    width: 700px;
+.haco-signIn-modal {
+    width: 300px;
     height: 423px;
     display: block;
-    margin: 50% 0 0 -300px;
+    margin: 50% 0 0 -150px;
     position: relative;
     top: 50%;
     left: 50%;
-    background: #fff;
+    background-image: url('../img/signIn.jpg');
     opacity: 0;
     transition: all 0.5s ease-in-out;
     border: 3px solid #000;
 }
 
-.haco-login-modal-wrapper.open .haco-login-modal {
+.haco-signIn-modal-wrapper.open .haco-signIn-modal {
     margin-top: -200px;
     opacity: 1;
 }
 
-.haco-login-modal-head { 
+.haco-signIn-modal-head { 
     width: 100%;
     height: 40px;
     padding: 5px 10px;
     overflow: hidden;
     border-bottom: 3px solid #000;
+    color:#000;
 }
 
-.haco-login-modal-content {
+.haco-signIn-modal-content {
     text-align:center;
-}
-.haco-login-modal-content > .modalQuestionBox {
-    padding-bottom: 20px;
+    padding:20px;
 }
 
-.login-bold{
-    font-weight:700;
-    font-size:25px;
-}
-
-.login-normal{
-    font-weight:500;
-    font-size:17px;
-}
-
-.login-welcome-text{
+.btn-close.signIn-trigger {
     color:#fff;
 }
 
-.login-welcome{
-    text-align:center;
-    color:#fff;
-    position:absolute;
-    height:50%;
-    width:300px;
-    z-index:30;
+.signIn-welcome {
+    padding-bottom:20px;
 }
 
-.login-hello{
-    text-align:center;
-    color:#fff;
-    position:absolute;
-    height:50%;
-    right:0;
-    width:300px;
-    z-index:30;
-    display:none;
-}
-
-.login-welcome-text{
-    margin-top:100px;
-}
-
-.login-move{
-    height:377px;
-    position:absolute;
-    width:300px;
-    text-align:center;
-    z-index:20;
-    background-color:#2ecc71;
-    background-image:url("../img/create.jpg");
-    background-size:cover;
-    background-position:left;
-    transition:all .4s ease;
-}
-
-@keyframes moving{
-    0%{width:300px;transform:translate(0px);}
-    50%{width:450px;transform:translate(100px);}
-    100%{width:300px;transform:translate(394px);}
-}
-
-@keyframes start{
-    0%{width:300px;transform:translate(400px);}
-    50%{width:350px;transform:translate(100px);}
-    100%{width:300px;transform:translate(0px);}
-}
-
-@keyframes startForm{
-    0%{width:394px;transform:translate(0px);}
-    50%{width:550px;transform:translate(100px);}
-    100%{width:394px;transform:translate(300px);}
-}
-
-@keyframes movingForm{
-    0%{width:394px;transform:translate(300px);}
-    50%{width:550px;transform:translate(100px);}
-    100%{width:394px;transform:translate(0px);}
-}
-
-.login-moving{
-    animation: moving .4s linear forwards;
-    transition:all .4s ease-out;
-}
-
-.login-movingForm{
-    animation: movingForm .4s linear forwards;
-    transition:all .4s ease-out;
-}
-
-.login-start{
-    animation: start .4s linear forwards;
-    transition:all .4s ease-out;
-}
-
-.login-startForm{
-    animation: startForm .4s linear forwards;
-    transition:all .4s ease-out;
-}
-
-.login-p-button{
-    animation-iteration-count:5;
-    padding:12px 40px;
-    color:#fff;
-    font-size:14px;
-    border:2px solid #fff;
-    width:50%;
-    position:absolute;
-    left:0;
-    right:0;
-    margin: auto;
-    top:60%;
-    text-align:center;
-    cursor:pointer;
-    transition:all .4s ease;
-}
-
-.login-p-button:hover{
-    transition:all .4s ease;
-    background-color:rgba(0,0,0,.7);
-}
-
-.login-container{
-    height:377px;
-    width:700px;
-}
-
-.login-text{
-    width:70%;
-    line-height:20px;
-    margin:0 auto;
-}
-
-.login-icon{
-    width:30px;
-    height:30px;
-    border:1px solid lightgray;
-    border-radius:50%;
-    text-align:center;
-    cursor:pointer;
-    line-height:30px;
-    display:inline-block;
-}
-
-.login-icon:hover{
-    background-color:#000;
-    color:white;
-}
-
-.login-light{
-    color:#b2bec3;
-}
-
-.login-icons{
-    text-align:center;
-    margin-bottom:20px;
-}
-
-.login-forgot{
-    display:none;
-}
-
-.login-form{
-    text-align:center;
-    position:absolute;
-    height:376px;
-    transform:translate(300px);
-    width:394px;
-    background-color:#fff;
-    padding: 20px;
-}
-
-.login-form > input {
-    border:0px;
-    border-bottom:1px solid lightgray;
-    margin-bottom: 8px;
-    padding: 8px 5px;
-    width:60%;
-}
-
-.login-b-button{
-    background-color: #ffffff;
-    padding: 12px 60px;
+input.signIn-normal {
+    padding: 8px;
     color: #000;
-    font-size: 14px;
-    border: 2px solid #000;
-    margin-top:9px;
+    margin-bottom: 5px;
+    background: none;
+    border: 1px solid;
 }
-    
+
+.signIn-forgot > a {
+    color:#fff;
+}
+.signIn-forgot > a:hover {
+    color:#000;
+    transition: all 0.5s ease-in-out;
+}
+.signIn-welcome-text {
+    font-weight: 600;
+    font-size: 22px;
+}
+.signIn-b-button {
+    width: 110px;
+    height: 37px;
+    background-color: #000;
+    border: 1px solid #000;
+}
+.signIn-b-button:hover {
+    border: 1px solid #fff;
+    background: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.signIn-btn {
+    position:absolute; 
+    left:50%; 
+    transform:translateX(-50%);
+    bottom: 20px;
+}
+.signIn-btn > a {
+    color:#fff;
+} 
+.signIn-container > input::placeholder {
+    color: #000;
+}
+.signIn-container > input::-webkit-input-placeholder {
+    color: #000;
+}
+.signIn-container > input:-ms-input-placeholder {
+    color: #000;
+}
+
+/* SIGN UP */
+.signUp-container {
+    color:#fff;
+}
+.haco-signUp-modal-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+    z-index: 3;
+}
+
+.haco-signUp-modal-wrapper.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.haco-signUp-modal {
+    width: 300px;
+    height: 423px;
+    display: block;
+    margin: 50% 0 0 -150px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    background-image: url('../img/signUp.jpg');
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    border: 3px solid #000;
+}
+
+.haco-signUp-modal-wrapper.open .haco-signUp-modal {
+    margin-top: -200px;
+    opacity: 1;
+}
+
+.haco-signUp-modal-head { 
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+    overflow: hidden;
+    border-bottom: 3px solid #000;
+    color:#000;
+}
+
+.haco-signUp-modal-content {
+    text-align:center;
+    padding:20px;
+}
+
+.btn-close.signUp-trigger {
+    color:#fff;
+}
+
+.signUp-welcome {
+    padding-bottom:20px;
+}
+
+input.signUp-normal {
+    padding: 8px;
+    color: #000;
+    margin-bottom: 5px;
+    background: none;
+    border: 1px solid;
+}
+
+.signUp-welcome-text {
+    font-weight: 600;
+    font-size: 22px;
+}
+.signUp-b-button {
+    width: 110px;
+    height: 37px;
+    background-color: #000;
+    border: 1px solid #000;
+    margin-top: 6px;
+}
+.signUp-b-button:hover {
+    background: none;
+    border: 1px solid #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+.signUp-btn {
+    position:absolute; 
+    left:50%; 
+    transform:translateX(-50%);
+    bottom: 20px;
+}
+.signUp-btn > a {
+    color:#fff;
+} 
+
+.signUp-container > input::placeholder {
+    color: #000;
+}
+.signUp-container > input::-webkit-input-placeholder {
+    color: #000;
+}
+.signUp-container > input:-ms-input-placeholder {
+    color: #000;
+}
 
 /* PORTFOLIO IMAGE */
 .imac {
@@ -2167,50 +2147,6 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
     .modalQuestionBox > img {
         width: 308px;
     }
-
-    .login-form {
-        display: contents;
-    }
-
-    .login-move {
-        display: none;
-    }
-
-    .haco-login-modal-wrapper.open .haco-login-modal {
-        margin-top: 0;
-    }
-
-    .haco-login-modal {
-        width: 100%;
-        margin: 0;
-        top: 10%;
-        left: 0;
-    }
-
-    .login-container {
-        width: 100%;
-    }
-
-    #login-mob-botton {
-        display: block;
-    }
-
-    #login-mob-botton {
-        display: block;
-        border: 2px solid #000;
-        top: 87%;
-        width: 46%;
-        background-color: #000;
-    }
-    .login-text {
-        display: none;
-    }
-    .login-welcome {
-        z-index: -1;
-    }
-    .login-hello {
-        z-index: -1;
-    }
 }
 
 /* IPHONE5*/
@@ -2317,50 +2253,5 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 
     .modalQuestion {
         font-size: 19px;
-    }
-
-    .login-form {
-        display: contents;
-    }
-
-    .login-move {
-        display: none;
-    }
-
-    .haco-login-modal-wrapper.open .haco-login-modal {
-        margin-top: 0;
-    }
-
-    .haco-login-modal {
-        width: 100%;
-        margin: 0;
-        top: 10%;
-        left: 0;
-    }
-
-    .login-container {
-        width: 100%;
-    }
-
-    #login-mob-botton {
-        display: block;
-    }
-
-    #login-mob-botton {
-        display: block;
-        border: 2px solid #000;
-        top: 87%;
-        width: 46%;
-        background-color: #000;
-    }
-
-    .login-text {
-        display: none;
-    }
-    .login-welcome {
-        z-index: -1;
-    }
-    .login-hello {
-        z-index: -1;
     }
 }
