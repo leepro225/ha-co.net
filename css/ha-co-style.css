@@ -1974,6 +1974,19 @@ input.signUp-normal {
         padding-inline-start: 0;
         padding-left: 16px;
     }
+
+    .aboutContentBoxIner {
+        min-height: 600px !important;
+    }
+
+    .aboutContentBoxIner > div {
+        min-height: 100px;
+    }
+
+    .aboutContentBoxIner div > img {
+        padding: 0 !important;
+    }
+
     .logo {
         position: absolute;
         top: 4px;
@@ -2256,5 +2269,17 @@ input.signUp-normal {
 
     .modalQuestion {
         font-size: 19px;
+    }
+
+    .aboutContentBoxIner {
+        min-height: 600px !important;
+    }
+
+    .aboutContentBoxIner > div {
+        min-height: 100px;
+    }
+
+    .aboutContentBoxIner div > img {
+        padding: 0 !important;
     }
 }

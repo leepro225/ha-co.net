@@ -26,7 +26,7 @@
     <!-- ha-co CSS -->
     <link rel="stylesheet" href="css/ha-co-style.css">
 </head>
-<body onload="startTime()">       
+<body>       
     <div class="container-fluid">          
         <div class="row">
             <div class="col-md-3 left">
@@ -58,9 +58,9 @@
                 <div class="haco-social-btn_wrap">
                     <span class="haco-social-span">SNS</span>
                     <div class="haco-social-container">
-                        <a href="#"><i class="fa fa-envelope"></i></a>
+                        <a><i class="fa fa-envelope" style="color: #b1b1b1;"></i></a>
                         <a href="https://github.com/leepro225" target="_blank"><i class="fab fa-github-alt"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a> 
+                        <a><i class="fab fa-linkedin-in" style="color: #b1b1b1;"></i></a> 
                     </div>
                 </div>                       
             </div>
@@ -77,42 +77,49 @@
                 <div>
                     <h1><span class="underlineMagical">👋 Hi, there!</span><br>
                         Let me introduce ha-co</h1>
-                    <h2>I am waiting for something <span class="underlineMagical"><b>interesting</b></span> to happen!<br>
-                        I like to have a cup of <span class="underlineMagical"><b>coffee</b></span> and have a conversation on the subject of development.
+                    <h2>
+                        I think this sentence explains me very <span class="underlineMagical"><b>simply.</b></span><br>
+                        <q><span class="underlineMagical"><b>Think</b></span> like a man of action and  <span class="underlineMagical"><b>act</b></span> like man of thought.</q>
                     </h2>
                 </div>
                 <div class="contentBox first">
                     <span class="subHeader1">console.log(&nbsp;<span class="subHeader2">haco.interview</span>&nbsp;);</span>
-                    <div class="contentBoxIner">
-                        <div class="col-md-12">
+                    <div class="contentBoxIner aboutContentBoxIner" style="min-height: 2500px;">
+                        <div class="col-md-12 hideme">
                             <img src="img/chat_01.jpg" style="width: 100%; padding:40px;">
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-12 hideme">
                             <img src="img/chat_02.jpg" style="width: 100%; padding:40px;">
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-12 hideme">
                             <img src="img/chat_03.jpg" style="width: 100%; padding:40px;">
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-12 hideme">
                             <img src="img/chat_04.jpg" style="width: 100%; padding:40px;">
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-12 hideme">
                             <img src="img/chat_05.jpg" style="width: 100%; padding:40px;">
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-12 hideme">
                             <img src="img/chat_06.jpg" style="width: 100%; padding:40px;">
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-12 hideme">
                             <img src="img/chat_07.jpg" style="width: 100%; padding:40px;">
                         </div>
-                        <div class="col-md-12">
-                            <img src="img/chat_08.jpg" style="width: 100%; padding:80px;">
+                        <div class="col-md-12 hideme">
+                            <img src="img/chat_08.jpg" style="width: 100%; padding:40px;">
+                        </div>
+                        <div class="col-md-12 hideme">
+                            <img src="img/chat_09.jpg" style="width: 100%; padding:40px;">
+                        </div>
+                        <div class="col-md-12 hideme">
+                            <img src="img/chat_10.jpg" style="width: 100%; padding:40px 40px 100px 40px;">
                         </div>
                     </div>
                 </div>
-                <div class="contentBox">
+                <!-- <div class="contentBox">
                     <span class="subHeader1">console.log(&nbsp;<span class="subHeader2">haco.mindSet</span>&nbsp;);</span>
-                    <div class="contentBoxIner">
+                    <div class="contentBoxIner" style="min-height: 600px;">
                         <div class="col-md-12">
                             <img src="img/chat_01.jpg" style="width: 100%; padding:40px;">
                         </div>
@@ -120,18 +127,7 @@
                             <img src="img/chat_02.jpg" style="width: 100%; padding:40px;">
                         </div>                     
                     </div>
-                </div>
-                <div class="contentBox">
-                    <span class="subHeader1">console.log(&nbsp;<span class="subHeader2">haco.hashTag</span>&nbsp;);</span>
-                    <div class="contentBoxIner" style="min-height: 500px;">
-                        <div class="col-md-12">
-                            <img src="img/chat_01.jpg" style="width: 100%; padding:40px;">
-                        </div>
-                        <div class="col-md-12">
-                            <img src="img/chat_02.jpg" style="width: 100%; padding:40px;">
-                        </div>                    
-                    </div>
-                </div>
+                </div> -->
                
 
                 <!-- 404 -->
@@ -215,41 +211,21 @@
     </div>
     <script>
 
-        // time
-        function startTime() {
-            var today = new Date();
-            var h = today.getHours();
-            var m = today.getMinutes();
-            var s = today.getSeconds();
-            var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-            m = checkTime(m);
-            s = checkTime(s);
-            checkAmpm(h);
-
-            document.getElementById("clock").innerHTML = h + ":" + m + ":" + s;
-            document.getElementById("months").innerHTML = months[today.getMonth()];
-            document.getElementById("today").innerHTML = today.getDate();
-
-            var t = setTimeout(startTime, 500);
-        }
-
-        function checkTime(i) {
-
-            if (i < 10) {i = "0" + i}; // 숫자가 10보다 작을 경우 앞에 0을 붙여줌
-            
-            return i;
-        }
-            
-        function checkAmpm(i) {
-
-            if (i < 12) {
-                document.getElementById("ampm").innerHTML = "AM";  // 숫자가 12보다 작을 경우 AM을 생성 
-            } else {
-                document.getElementById("ampm").innerHTML = "PM";  // 숫자가 12보다 작을 경우 PM을 생성 
-            };              
-        }
-
         $(document).ready(function(){
+
+            // scroll event
+            $(".right").scroll(function(){
+                $('.hideme').each( function(i){
+                
+                    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+                    
+                    /* If the object is completely visible in the window, fade it it */
+                    if( bottom_of_window > bottom_of_object ){   
+                        $(this).animate({'opacity':'1'},800);  
+                    }
+                }); 
+            });
   
             // menu
             var burger = $('.menu-trigger');
