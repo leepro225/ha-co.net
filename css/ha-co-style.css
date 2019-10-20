@@ -45,6 +45,11 @@ a:focus {
 }
 
 
+/* skill Set */
+.skillSetUl img {
+    width: 17px;
+    padding-bottom: 5px;
+}
 
 
 /* CONTACT */
@@ -213,8 +218,8 @@ h1 {
     }
 
 h2 {
-    font-size: 25px;
-    font-weight: 400;
+    font-size: 22px;
+    font-weight: 300;
     line-height: 1.6;
     animation-fill-mode: both;
     animation-duration: 1000ms;
@@ -222,7 +227,7 @@ h2 {
     animation-iteration-count: 1;
     opacity: 1;
     animation-name: react-reveal-761531313842480-2;
-    letter-spacing: -1px;
+    letter-spacing: 1px;
 }
 
     @keyframes react-reveal-761531313842480-2 {
@@ -2163,6 +2168,12 @@ input.signUp-normal {
     .modalQuestionBox > img {
         width: 308px;
     }
+    .categoryBtn {
+        display: block;
+        float: left;
+        margin-top: 19px;
+        margin-bottom: 15px;
+    }
 }
 
 /* IPHONE5*/
@@ -2281,5 +2292,12 @@ input.signUp-normal {
 
     .aboutContentBoxIner div > img {
         padding: 0 !important;
+    }
+
+    .categoryBtn {
+        display: block;
+        float: left;
+        margin-top: 19px;
+        margin-bottom: 15px;
     }
 }
